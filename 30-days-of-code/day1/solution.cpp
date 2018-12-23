@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int i = 4;
     double d = 4.0;
     string s = "HackerRank ";

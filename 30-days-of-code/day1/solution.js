@@ -1,8 +1,8 @@
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
 
-var inputStdin = "";
-var inputStdinArray = "";
+var inputStdin = '';
+var inputStdinArray = '';
 var inputCurrentLine = 0;
 
 process.stdin.on('data', function (data) {
@@ -10,7 +10,7 @@ process.stdin.on('data', function (data) {
 });
 
 process.stdin.on('end', function () {
-  inputStdinArray = inputStdin.split("\n");
+  inputStdinArray = inputStdin.split('\n');
   main();
 });
 
@@ -22,7 +22,7 @@ function readLine() {
 function main() {
   var i = 4;
   var d = 4.0;
-  var s = "HackerRank ";
+  var s = 'HackerRank ';
 
   var input_int = parseInt(readLine());
   var input_double = parseFloat(readLine());
