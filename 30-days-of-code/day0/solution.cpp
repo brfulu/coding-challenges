@@ -1,4 +1,4 @@
-#include <cmath>
+#include <bits/stdc++.h>
 #include <cstdio>
 #include <vector>
 #include <iostream>
