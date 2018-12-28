@@ -12,7 +12,7 @@ int main()
     int in_degree[30];
     fill(in_degree, in_degree + 30, 0);
 
-    set<char> seen;
+    set<int> seen;
     while (getline(file, line))
     {
         char u, v;
@@ -26,7 +26,7 @@ int main()
     priority_queue<int, vector<int>, greater<int>> pq;
     for (int i = 0; i < 26; i++)
     {
-        if (in_degree[i] == 0)
+        if (in_degree[i] == 0 && seen.count(i))
             pq.push(i);
     }
 
@@ -34,10 +34,7 @@ int main()
     while (!pq.empty())
     {
         int u = pq.top();
-        if (seen.count(u) > 0)
-        {
-            topo_order += char(u + 'A');
-        }
+        topo_order += char(u + 'A');
         pq.pop();
 
         for (int v : graph[u])
